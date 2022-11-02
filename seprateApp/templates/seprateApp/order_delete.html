@@ -1,0 +1,9 @@
+{% extends 'seprateApp/master.html' %}
+{% block content %}
+<p>Are you sure want to delete that {{order}}?</p>
+<form action="" method="POST">
+    {% csrf_token %}
+    <a href="{% url 'dashboard' %}"><button class="btn btn-warning">Cancel</button></a>
+    <button class="btn btn-danger">Delete</button>
+</form>
+{% endblock content %}
